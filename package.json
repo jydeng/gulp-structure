@@ -1,0 +1,33 @@
+{
+  "name": "gulp-structure",
+  "version": "1.0.0",
+  "description": "整理一下的基于gulp的构建流程，开发非单页应用的时候比较好使。",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jydeng/gulp-structure.git"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "Roy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jydeng/gulp-structure/issues"
+  },
+  "homepage": "https://github.com/jydeng/gulp-structure#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-file-include": "^2.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "browser-sync": "^2.24.5"
+  }
+}
