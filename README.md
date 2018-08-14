@@ -1,15 +1,37 @@
 # gulp 脚手架
-近期完成了公司首页的改版工作，主要工作是还原PSD，实现各种交互效果，这种项目使用gulp是最适合不过了。
-简单、符合直觉，CSS、JS等资源文件分离的很完整，新人也完全无门槛使用。
-项目完成，分享一下gulp构建流程，也方便以后复用。
+gulp 前端开发环境,适用于传统多页应用,H5等
 
-## 要怎么使用
+## 使用
+- 克隆项目
+- 按照目录划分进行编码
+- 启动项目,码力全开
+- 拷贝dist目录,上线
 
+## 运行
+
+克隆
 ```
-git clone  //克隆这个项目到你的本地
-npm install //安装构建过程中的各种依赖
-npm start //完成首次打包工作
+git clone  https://github.com/jydeng/gulp-structure.git;
+```
+
+安装依赖
+```
+npm install; 
+```
+
+启动
+```
+npm start;
 ```
 
 ## 目录结构分析
-先参考一下gulpfile与我的展示Demo,我要找一下Markdown画目录树的办法......
+- src -- 源码
+  - assets -- 图片、SVG等资源目录
+  - css -- css
+  - js  -- js
+  - tpl -- 模板,页头页脚等
+
+- dist -- 生成、压缩后的代码
+
+## 说明
+具体配置细节可以参见gulpfile.js, 也可以参考src/index.html,这是一个栗子,若需要stylus、sass、typescript、es6支持可以在npm上搜索gulp-plugins进行安装。
