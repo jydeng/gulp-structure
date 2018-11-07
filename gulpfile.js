@@ -89,7 +89,7 @@ gulp.task('auto', function() {
 
   gulp.watch(tplHtml, ['html']);
 
-  gulp.watch(srcAssets, ['assest']);
+  gulp.watch(srcAssets, ['assets']);
 
   gulp.watch('./dist/**/*.*').on('change', browerSync.reload);
 });
