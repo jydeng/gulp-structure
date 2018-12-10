@@ -6,6 +6,7 @@ const autoprefixer = require("gulp-autoprefixer");
 const browerSync = require("browser-sync").create();
 const gulpUtil = require("gulp-util");
 const sass = require("gulp-sass");
+var px2rem = require("gulp-px2rem-plugin");
 sass.compiler = require("node-sass");
 
 const srcScript = "./src/js/*.js";
@@ -40,12 +41,9 @@ gulp.task("css", function() {
   gulp
     .src(srcCSS)
 
-    .pipe(
-      autoprefixer({
-        browsers: ["last 2 versions"],
-        cascade: false
-      })
-    )
+    .pipe(px2rem({ width_design: 750 }))
+
+    .pipe(autoprefixer({ browsers: ["last 2 versions"], cascade: false }))
 
     .pipe(minifyCSS())
 
@@ -61,6 +59,8 @@ gulp.task("sass", function() {
     .src(srcSass)
 
     .pipe(sass())
+
+    .pipe(px2rem({ width_design: 750 }))
 
     .pipe(
       autoprefixer({
@@ -110,7 +110,7 @@ gulp.task("auto", function() {
 
   gulp.watch(srcCSS, ["css"]);
 
-  gulp.watch(dstSass, ["sass"]);
+  gulp.watch(srcSass, ["sass"]);
 
   gulp.watch(srcHtml, ["html"]);
 
@@ -122,12 +122,4 @@ gulp.task("auto", function() {
 });
 
 //整个工作流的入口
-gulp.task("default", [
-  "script",
-  "css",
-  "sass",
-  "html",
-  "assets",
-  "server",
-  "auto"
-]);
+gulp.task("default", ["script", "css", "sass", "html", "assets", "server", "auto"]);

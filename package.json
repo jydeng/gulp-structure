@@ -31,5 +31,8 @@
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
     "node-sass": "^4.10.0"
+  },
+  "dependencies": {
+    "gulp-px2rem-plugin": "^0.4.0"
   }
 }
