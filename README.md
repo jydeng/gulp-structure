@@ -1,39 +1,44 @@
-# gulp 脚手架
-gulp 前端开发环境,适用于传统多页应用,H5等
+# gulp-structure
 
-## 使用
-- 克隆项目
-- 按照目录划分进行编码
-- 启动项目,码力全开
-- 拷贝dist目录,上线
+gulp 前端工作流,适用于非框架多页应用,Html5 活动页等不方便使用 webpack 管理依赖的项目。
 
-## 运行
+## 如何使用
 
-克隆
+1. 克隆项目、安装依赖一气呵成
+2. 阅读gulpfile.js，按照项目目录进行开发
+3. npm run start 调试
+4. npm run build 打包构建 
+5. 拷贝/dist上线
+
+## 目录结构
 ```
-git clone  https://github.com/jydeng/gulp-structure.git;
-```
+project
+|   config.json 项目配置文件
+|   gulpfile.js gulp配置文件
+|   README.md   说明文件
+|—— src 源码
+|   |   index.html 主页
+|   |
+|   |—— tpl 模板
+|   |   header.html 头部
+|   |   footer.html 底部
+|   |
+|   |—— scss SASS
+|   |   index.scss
+|   |
+|   |—— js JavaScript
+|   |   index.js
+|   |
+|   |—— css CSS
+|   |   index.css
+|   |
+|   |—— assets  各种资源以及库文件
+|   |
+|   |
+|—— dist 构建发布
 
-安装依赖
 ```
-npm install; 
-```
-
-启动
-```
-npm start;
-```
-
-## 目录结构分析
-- src -- 源码
-  - assets -- 图片、SVG等资源目录
-  - css -- css
-  - js  -- js
-  - tpl -- 模板,页头页脚等
-
-- dist -- 生成、压缩后的代码
 
 ## 说明
-具体配置细节可以参见gulpfile.js, 也可以参考src/index.html,这是一个栗子,若需要stylus、sass、typescript、es6支持可以在npm上搜索gulp-plugins进行安装。
 
-gulp整个流程相对于webpack更加简洁明了,在开发多页面应用,例如首页、H5等项目中还是很方便的。
+gulp 整个流程相对于 webpack 更加简洁明了,适用于非框架多页应用,Html5 活动页等不方便使用 webpack 管理依赖的项目。
